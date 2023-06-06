@@ -1,3 +1,6 @@
+#Adriano Tisera
+#Federico Davara
+
 import threading
 import math
 
