@@ -27,20 +27,20 @@ while True:
         child_pid = os.fork()
         if not child_pid:
             while True:
-                msg = client_socket.recv(1024)
-                if not msg.decode():
+                mensaje = client_socket.recv(1024)
+                if not mensaje.decode():
                     break
                 else:
-                    data = msg.decode()
-                    print("Received: %s" % data)
-                    if data == "exit\r\n":
+                    datos = mensaje.decode()
+                    print("Recivido: %s" % datos)
+                    if datos == "exit\r\n":
                         response = "\nHasta pronto\r\n".encode("utf-8")
                         client_socket.send(response)
                         client_socket.close()
                         print("El cliente %s ha finalizado la conexion\r\n" % str(client_address))
                         sys.exit(0)
                     else:
-                        response_msg = data.upper() + "\r\n"
+                        response_msg = datos.upper() + "\r\n"
                         client_socket.send(response_msg.encode("utf-8"))
     except BrokenPipeError:
         print("El cliente termino la conexion")
