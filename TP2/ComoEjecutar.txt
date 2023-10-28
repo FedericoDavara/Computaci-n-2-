@@ -1,0 +1,13 @@
+
+Primero ejecutar con python tp2.py -i ip -p puerto -f nombre de la imagen
+
+en donde dice ip colocar ip ejemplo 127.0.0.1 en ipv4 o ::1 en ipv6
+
+en donde dice puerto colocar el puerto por ejemplo 5000 
+
+y al final en lugar de nombre de la imagen colocar el nombre de la imagen
+deje dos imagenes para poder hacer las pruevas una es hola1.png y la otra es hola.png
+
+las devuelve con el mismo nombre colocandole gris_ delante del nombre original 
+
+Para ejecutar se deben tener las librerias OpenCV y los modulos threading, socket, os y argparse
